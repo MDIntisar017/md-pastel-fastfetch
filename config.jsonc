@@ -1,0 +1,67 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "debian",
+        "color": {
+            "1": "34", 
+            "2": "34"
+        },
+        "padding": {
+            "top": 2,
+            "right": 4
+        }
+    },
+    "display": {
+        "separator": " ➜  ",
+        "color": {
+            "title": "34", 
+            "keys": "35"   
+        }
+    },
+    "modules": [
+        "title",
+        "separator",
+        
+        { "type": "custom", "format": "󰘚 HARDWARE", "outputColor": "31" },
+        { "type": "host",         "key": "  󰌢 Computer        ", "keyColor": "34" },
+        { "type": "cpu",          "key": "  󰻠 Processor       ", "keyColor": "33" },
+        { "type": "gpu",          "key": "  󰢮 Graphics        ", "keyColor": "35" },
+        { "type": "display",      "key": "  󰍹 Resolution      ", "keyColor": "36" },
+        { "type": "memory",       "key": "  󰍛 Memory          ", "keyColor": "34" },
+        { "type": "swap",         "key": "  󰓡 Swap            ", "keyColor": "32" },
+        { "type": "disk",         "key": "  󰋊 Disk            ", "keyColor": "31" },
+        
+        "break",
+
+        { "type": "custom", "format": "󰟀 SOFTWARE", "outputColor": "34" },
+        { "type": "os",           "key": "  󰣚 Operating System", "keyColor": "36" },
+        { "type": "kernel",       "key": "  󰌽 Kernel           ", "keyColor": "35" },
+        { "type": "shell",        "key": "  󰈺 Shell            ", "keyColor": "31" },
+        { "type": "terminal",     "key": "  󰆍 Terminal         ", "keyColor": "33" },
+        { "type": "terminalfont", "key": "  󰛖 Terminal Font    ", "keyColor": "34" },
+        { "type": "packages",     "key": "  󰏖 Packages         ", "keyColor": "33" },
+
+        "break",
+
+        { "type": "custom", "format": "󰃟 APPEARANCE", "outputColor": "32" },
+        { "type": "wmtheme",      "key": "  󱂬 Window Manager   ", "keyColor": "36" },
+        { "type": "theme",        "key": "  󰉼 GTK Theme        ", "keyColor": "34" },
+        { "type": "icons",        "key": "  󰀻 Icon Theme       ", "keyColor": "33" },
+        { "type": "cursor",       "key": "  󰇀 Cursor Theme     ", "keyColor": "35" },
+        
+        "break",
+
+        { "type": "custom", "format": "󰋖 SYSTEM", "outputColor": "35" },
+        { "type": "uptime",       "key": "  󱎫 Uptime           ", "keyColor": "33" },
+        { "type": "command",      "key": "  󰇚 Installation Age", "keyColor": "32", "text": "echo \"$(( ($(date +%s) - $(stat -c %Y /)) / 86400 )) days\"" },
+        
+        "break",
+
+        { "type": "custom", "format": "󰏘 COLOR PALETTE", "outputColor": "36" },
+        {
+            "type": "colors",
+            "symbol": "●",
+            "paddingLeft": 2
+        }
+    ]
+}
